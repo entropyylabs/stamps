@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 import { ReadyWalletDocument, Wallet } from "../../../generated/graphql"
 import { WalletSetupBox } from "./WalletSetupBox"
 import * as fcl from "@onflow/fcl"
-import { AlertModal } from "ui/Modal/AlertModal"
 
 interface Props {
   wallet: Wallet

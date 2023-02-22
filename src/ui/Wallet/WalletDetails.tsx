@@ -1,5 +1,14 @@
 import React from "react"
-import { SimpleGrid, Spinner, Button, Tooltip, Box, Center, useDisclosure, VStack } from "@chakra-ui/react"
+import {
+  SimpleGrid,
+  Spinner,
+  Button,
+  Tooltip,
+  Box,
+  Center,
+  useDisclosure,
+  VStack,
+} from "@chakra-ui/react"
 import {
   FiTool as WalletStatusIcon,
   FiPackage as WalletItemsIcon,
@@ -95,7 +104,6 @@ export const WalletDetails = (props: WalletDetailsProps) => {
                 Retry Wallet Creation
               </Button>
             ) : null}
-
           </VStack>
         </>
       )}

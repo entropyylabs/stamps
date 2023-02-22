@@ -9,7 +9,6 @@ import { WalletQuery, WalletDocument } from "../../generated/graphql"
 import { FaGoogle } from "react-icons/fa"
 
 const HomePage = () => {
-
   const { session, signIn, isLoading } = useAuthContext()
 
   const { wallet, fetching: walletFetching } = useGraphQLQuery<WalletQuery>({
@@ -23,7 +22,7 @@ const HomePage = () => {
       <Center py={{ base: "1rem" }} flexDir="column" position="relative">
         <Box px="1rem">
           <VStack>
-            {!session &&
+            {!session && (
               <Box pt="200">
                 <Text p="5" textAlign="center" fontWeight="semibold" fontSize="xl">
                   Login to get started!
@@ -38,8 +37,8 @@ const HomePage = () => {
                   Sign in with Google
                 </Button>
               </Box>
-            }
-            {session &&
+            )}
+            {session && (
               <VStack>
                 <WalletDetails
                   isLoading={fetching}
@@ -48,13 +47,14 @@ const HomePage = () => {
                   walletStatus={wallet?.state?.toString()}
                   walletOwnerEmail={wallet?.appUser?.email}
                 />
+                <h1>Hello</h1>
                 <Logout />
               </VStack>
-            }
+            )}
           </VStack>
         </Box>
       </Center>
-    </AppLayout >
+    </AppLayout>
   )
 }
 
