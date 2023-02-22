@@ -7,13 +7,13 @@ import { ComponentWithAuth } from "../components/ComponentWithAuth"
 import { GraphQLClientProvider } from "../components/GraphQLClientProvider"
 import theme from "../lib/chakra-theme"
 import Head from "next/head"
+import "./global.css"
 
 type AppProps<P = {}> = NextAppProps<P> & {
   Component: ComponentWithAuth
 }
 
 const App = ({ Component, pageProps: { session, auth, ...pageProps } }: AppProps): JSX.Element => {
-
   return (
     <>
       <Head>
