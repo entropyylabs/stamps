@@ -3,3 +3,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.letter-wrapper {
+  /* background: rgb(1, 146, 98); */
+  width: 46px;
+  height: 66px;
+
+  padding: 5px;
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: default;
+}
+
+.letter-wrapper:hover {
+  /* background: rgb(0, 218, 145) !important; */
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+table,
+tr,
+td {
+  border: 1px inset #262626;
+  border-collapse: collapse;
+}
