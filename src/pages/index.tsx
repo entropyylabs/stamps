@@ -6,10 +6,12 @@ import { Logout } from "@components/Logout"
 import { useGraphQLQuery } from "graphql/useGraphQLQuery"
 import { useAuthContext } from "hooks/useAuthContext"
 import { WalletQuery, WalletDocument } from "../../generated/graphql"
-
+import { useRouter } from "next/router"
 import { FaGoogle } from "react-icons/fa"
+import Explore from "../ui/Explore/Explore"
 
 const HomePage = () => {
+  const router = useRouter()
   const { session, signIn, isLoading } = useAuthContext()
 
   const { wallet, fetching: walletFetching } = useGraphQLQuery<WalletQuery>({
@@ -66,19 +68,7 @@ const HomePage = () => {
           </div>
         </>
       )}
-      {session && (
-        <VStack>
-          <WalletDetails
-            isLoading={fetching}
-            walletAddress={wallet?.address}
-            walletItems={wallet?.nfts?.length}
-            walletStatus={wallet?.state?.toString()}
-            walletOwnerEmail={wallet?.appUser?.email}
-          />
-          <h1>Hello</h1>
-          <Logout />
-        </VStack>
-      )}
+      {session && <Explore />}
     </AppLayout>
   )
 }
