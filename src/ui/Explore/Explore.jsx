@@ -92,7 +92,7 @@ const Explore = () => {
         <img className="absolute top-[581px] left-[177px] w-9 h-9" alt="" src="../down-icon.svg" />
         <button className="cursor-pointer [border:none] p-0 bg-gray-100 absolute top-[414px] left-[19px] rounded-lg w-[352px] h-12">
           <div className="absolute top-[16px] text-center text-[16px] w-full tracking-[0.6px] leading-[16px] font-medium font-work-sans text-white text-left">
-            <Link href="/hunt">Start the hunt</Link>
+            <Link href="/hunts/mickey">Start the hunt</Link>
           </div>
         </button>
       </main>
