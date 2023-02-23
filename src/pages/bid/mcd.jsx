@@ -1,4 +1,5 @@
 import React from "react"
+import HamMenu from "../../components/HamMenu"
 
 const mcd = () => {
   return (
@@ -47,6 +48,7 @@ const mcd = () => {
           Place a bid
         </div>
       </div>
+      <HamMenu />
     </div>
   )
 }
