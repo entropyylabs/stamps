@@ -50,7 +50,7 @@ const Sell: NextPage = () => {
         <img
           className="absolute top-[41px] left-[110px] w-[129px] h-[142px]"
           alt=""
-          src="../stamp5.svg"
+          src="../hmstamp.svg"
         />
         <div className="absolute top-[217px] left-[0px] rounded-lg bg-mediumblue w-[348px] h-12">
           <div className="absolute top-[15px] left-[124px] tracking-[0.6px] leading-[16px] font-medium">
