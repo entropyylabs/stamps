@@ -28,6 +28,7 @@
     "axios": "^0.27.2",
     "buffer": "6.0.3",
     "exponential-backoff": "^3.1.0",
+    "flipping-pages": "^3.1.0",
     "formik": "^2.2.9",
     "framer-motion": "^6.4.3",
     "google-protobuf": "^3.14.0",
