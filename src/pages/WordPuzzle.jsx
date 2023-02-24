@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import Word from "../components/Word"
-import { Button } from "@chakra-ui/react"
 import Link from "next/link"
 
 const WordPuzzle = () => {
@@ -29,18 +28,20 @@ const WordPuzzle = () => {
             WELL DONE! THATS CORRECT!
           </div>
           <div className="absolute text-[20px] top-[60px] left-[80px] tracking-[0.2px] leading-[24px] flex items-center justify-center w-[322px] h-[50px]">
-            <button className="cursor-pointer [border:none] p-0 bg-gray-100 absolute top-[0px] left-[0px] rounded-lg w-40 h-10">
-              <div className="absolute top-[12px] left-[30px] w-20 h-4">
-                <div className="absolute top-[0px] left-[0px] text-xl tracking-[0.6px] leading-[16px] font-medium font-work-sans text-white text-center">
-                  Next clue
+            <Link href="/geoguesser">
+              <button className="cursor-pointer [border:none] p-0 bg-gray-100 absolute top-[0px] left-[0px] rounded-lg w-40 h-10">
+                <div className="absolute top-[12px] left-[30px] w-20 h-4">
+                  <div className="absolute top-[0px] left-[0px] text-xl tracking-[0.6px] leading-[16px] font-medium font-work-sans text-white text-center">
+                    Next clue
+                  </div>
                 </div>
-              </div>
-              <img
-                className="rotate-180 invert absolute top-[13px] left-[116px] w-3.5 h-3.5 overflow-hidden"
-                alt=""
-                src="../back-icon.svg"
-              />
-            </button>
+                <img
+                  className="rotate-180 invert absolute top-[13px] left-[116px] w-3.5 h-3.5 overflow-hidden"
+                  alt=""
+                  src="../back-icon.svg"
+                />
+              </button>
+            </Link>
           </div>
         </div>
       ) : (
