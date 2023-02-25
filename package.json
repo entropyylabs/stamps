@@ -1,10 +1,10 @@
 {
-  "name": "walletless-onboarding",
+  "name": "stamps",
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev --port 3000\" \"yarn generate --watch\"",
+    "dev": "concurrently \" next dev --port 3000\" \"yarn generate --watch\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

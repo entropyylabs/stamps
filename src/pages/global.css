@@ -31,3 +31,7 @@ td {
   border: 1px inset #262626;
   border-collapse: collapse;
 }
+
+#id {
+  height: 695px !important;
+}
