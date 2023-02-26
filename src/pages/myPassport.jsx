@@ -5,6 +5,7 @@ import "flipping-pages/dist/style.css"
 import Link from "next/link"
 import Sheet from "react-modal-sheet"
 import FlipPage from "../components/FlipPage"
+import { flippage } from "../utils/pageConfig"
 
 const myPassport = () => {
   const [selected, setSelected] = useState(0)
@@ -59,15 +60,11 @@ const myPassport = () => {
       </Sheet>
       <div className="absolute top-[60px] left-[21px] w-[348px] h-[458px]">
         <FlippingPages direction="right-to-left" onSwipeEnd={setSelected} selected={selected}>
-          <div className="page page1">
-            <FlipPage index={0} />
-          </div>
-          <div className="page page2">
-            <FlipPage index={1} />
-          </div>
-          <div className="page page3">
-            <FlipPage index={2} />
-          </div>
+          {flippage.map((page, index) => (
+            <div className={`page page${index + 1}`}>
+              <FlipPage index={index} />
+            </div>
+          ))}
         </FlippingPages>
       </div>
 
