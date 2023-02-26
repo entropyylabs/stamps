@@ -6,7 +6,7 @@ export const flippage = [
     huntUtility1: "Free Mickey merch at the DISNEY Store",
     huntUtility2: "Free ticket to the next Disney movie",
     huntUtility1Icon: "../dollar.svg",
-    huntUtility2Icon: "../group.svg",
+    huntUtility2Icon: "../fireworks.svg",
   },
   {
     huntName: "tesla premium",
@@ -14,7 +14,7 @@ export const flippage = [
     huntExpiry: "10th JULY 2024",
     huntUtility1: " Access to exclusive features!",
     huntUtility2: "Be a part of the next Tesla product launch ",
-    huntUtility1Icon: "../frame-85.svg",
+    huntUtility1Icon: "../wow.svg",
     huntUtility2Icon: "../dollar.svg",
   },
   {
@@ -23,7 +23,7 @@ export const flippage = [
     huntExpiry: "17th MARCH 2023",
     huntUtility1: "Get access to exclusive spring wear",
     huntUtility2: "Be a part of the next H&M Fashion showcase",
-    huntUtility1Icon: "../frame-85.svg",
-    huntUtility2Icon: "../vector.svg",
+    huntUtility1Icon: "../wow.svg",
+    huntUtility2Icon: "../star.svg",
   },
 ]
