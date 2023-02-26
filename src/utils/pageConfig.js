@@ -5,8 +5,8 @@ export const flippage = [
     huntExpiry: "5th JUNE 2023",
     huntUtility1: "Free Mickey merch at the DISNEY Store",
     huntUtility2: "Free ticket to the next Disney movie",
-    huntUtility1Icon: "../dollar.svg",
-    huntUtility2Icon: "../fireworks.svg",
+    huntUtility1Icon: "../fireworks.svg",
+    huntUtility2Icon: "../dollar.svg",
   },
   {
     huntName: "tesla premium",
