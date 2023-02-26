@@ -61,7 +61,7 @@ const myPassport = () => {
       <div className="absolute top-[60px] left-[21px] w-[348px] h-[458px]">
         <FlippingPages direction="right-to-left" onSwipeEnd={setSelected} selected={selected}>
           {flippage.map((page, index) => (
-            <div className={`page page${index + 1}`}>
+            <div key={index} className={`page page${index + 1}`}>
               <FlipPage index={index} />
             </div>
           ))}
