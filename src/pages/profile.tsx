@@ -14,8 +14,6 @@ const profile = () => {
     pause: isLoading,
   })
 
-  console.log(session)
-
   const fetching = walletFetching || isLoading
 
   return (

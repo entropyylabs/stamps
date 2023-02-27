@@ -1,4 +1,6 @@
 import type { NextPage } from "next"
+import HamMenu from "../components/HamMenu"
+import BackIcon from "../components/BackIcon"
 
 const Sell: NextPage = () => {
   return (
@@ -58,8 +60,8 @@ const Sell: NextPage = () => {
           </div>
         </div>
       </div>
-      <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
-      <img className="absolute top-[14px] left-[349px] w-5 h-5" alt="" src="../menu.svg" />
+      <HamMenu />
+      <BackIcon to="/" />
     </div>
   )
 }

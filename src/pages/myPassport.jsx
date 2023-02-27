@@ -6,6 +6,7 @@ import Link from "next/link"
 import Sheet from "react-modal-sheet"
 import FlipPage from "../components/FlipPage"
 import { flippage } from "../utils/pageConfig"
+import HamMenu from "../components/HamMenu"
 
 const myPassport = () => {
   const [selected, setSelected] = useState(0)
@@ -25,6 +26,7 @@ const myPassport = () => {
   }
   return (
     <div className="relative bg-goldenrod w-full h-[665px] overflow-hidden cursor-pointer text-left text-lg text-black font-work-sans">
+      <HamMenu />
       <Sheet isOpen={isOpen} onClose={() => setOpen(false)} detent="content-height">
         <Sheet.Container style={{ border: "2px solid black" }}>
           <Sheet.Header />
