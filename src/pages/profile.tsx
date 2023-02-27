@@ -6,6 +6,8 @@ import { useAuthContext } from "../hooks/useAuthContext"
 import { WalletQuery, WalletDocument } from "../../generated/graphql"
 import BackIcon from "../components/BackIcon"
 import Link from "next/link"
+import { useDisclosure } from "@chakra-ui/react"
+import { WalletSwitcherModal } from "ui/Wallet/WalletSwitcherModal"
 
 const profile = () => {
   const { session, signIn, isLoading } = useAuthContext()
@@ -15,12 +17,14 @@ const profile = () => {
     pause: isLoading,
   })
 
+  const disclosure = useDisclosure()
   const fetching = walletFetching || isLoading
 
   return (
     <div>
       <div className="relative bg-white w-full h-[665px] overflow-hidden text-left text-4xl text-black font-work-sans">
         <HamMenu />
+        <WalletSwitcherModal disclosure={disclosure} />
         <div className="absolute top-[114px] left-[21px] w-[348px] h-64 text-left text-lg text-gray-100 font-work-sans">
           <div className="absolute top-[0px] left-[0px] w-[348px] h-64">
             <img
@@ -79,7 +83,12 @@ const profile = () => {
             </div>
           </div>
         </div>
-        <button className="cursor-pointer [border:none] p-0 bg-mediumblue absolute top-[407px] left-[81px] rounded-lg w-[228px] h-[46px]">
+        <button
+          className="cursor-pointer [border:none] p-0 bg-mediumblue absolute top-[407px] left-[81px] rounded-lg w-[228px] h-[46px]"
+          onClick={(e) => {
+            disclosure.onOpen()
+          }}
+        >
           <div className="absolute top-[15px] left-[27px] w-[228px] h-4">
             <div className="absolute top-[0px] left-[0px] text-xl tracking-[0.6px] leading-[16px] font-work-sans text-white text-center">
               Switch or Add wallet
