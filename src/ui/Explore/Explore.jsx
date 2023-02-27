@@ -14,8 +14,7 @@ const Explore = () => {
             src="../screenshot-20230216-at-1212-1@2x.png"
           />
           <div className="absolute top-[0px] left-[0px] bg-goldenrod w-[390px] h-[60px]"></div>
-
-          <div className="absolute text-[32px] top-[8px] left-[27px] tracking-[0.2px] leading-[32px] flex items-center w-[168px] h-[49px]">
+          <div className="absolute text-[28px] top-[8px] left-[19px] tracking-[0.2px] leading-[32px] flex items-center w-[168px] h-[49px]">
             EXPLORE..
           </div>
         </div>
