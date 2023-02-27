@@ -10,18 +10,18 @@ const HamMenu = () => {
           <img className="" alt="" src="../menu.svg" />
         </MenuButton>
         <MenuList style={{ marginRight: "21px", marginTop: "-10px" }}>
-          <MenuItem style={{ color: "#262626", fontSize: "16px" }}>
-            <Link href="/passport">My Passport</Link>
-          </MenuItem>
-          <MenuItem style={{ color: "#262626", fontSize: "16px" }}>
-            <Link href="/">Collect</Link>
-          </MenuItem>
-          <MenuItem style={{ color: "#262626", fontSize: "16px" }}>
-            <Link href="/buy">Buy</Link>
-          </MenuItem>
-          <MenuItem style={{ color: "#262626", fontSize: "16px" }}>
-            <Link href="/profile">Your Profile</Link>
-          </MenuItem>
+          <Link href="/passport">
+            <MenuItem style={{ color: "#262626", fontSize: "16px" }}>My Passport</MenuItem>
+          </Link>
+          <Link href="/">
+            <MenuItem style={{ color: "#262626", fontSize: "16px" }}>Collect</MenuItem>
+          </Link>
+          <Link href="/buy">
+            <MenuItem style={{ color: "#262626", fontSize: "16px" }}>Buy</MenuItem>
+          </Link>
+          <Link href="/profile">
+            <MenuItem style={{ color: "#262626", fontSize: "16px" }}>Your Profile</MenuItem>
+          </Link>
         </MenuList>
       </Menu>
     </div>
