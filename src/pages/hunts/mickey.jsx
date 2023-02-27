@@ -36,7 +36,7 @@ const mickey = () => {
             1/5
           </b>
           <div className="absolute top-[0px] left-[0px] tracking-[0.2px] leading-[24px] text-gray-200 flex items-center w-[207px] h-[26px] text-[12px]">
-            Floor price : 100 Euros
+            Floor price : $100
           </div>
         </div>
         <div className="absolute top-[363px] left-[23px] w-[302px] h-[133px] text-gray-200">
@@ -55,13 +55,13 @@ const mickey = () => {
           <img
             className="absolute h-[24.06%] w-[10.6%] top-[17.29%] right-[68.21%] bottom-[58.65%] left-[21.19%] max-w-full overflow-hidden max-h-full"
             alt=""
-            src="../group.svg"
+            src="../fireworks.svg"
           />
         </div>
       </div>
       <button className="cursor-pointer [border:none] p-0 bg-gray-100 absolute top-[607px] left-[21px] rounded-lg w-[348px] h-[46px]">
         <div className="absolute top-[15px] tracking-[0.6px] leading-[16px] font-medium font-work-sans text-white text-center w-full text-center text-[16px]">
-          <Link href="/clue">Let’s play</Link>
+          <Link href="/WordPuzzle">Let’s play</Link>
         </div>
       </button>
       <Link href="/">
