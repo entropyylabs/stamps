@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import { createContext, useCallback, useEffect, useState } from "react"
-
 import { useSession } from "next-auth/react"
 import * as fcl from "@onflow/fcl"
 import { signOut as nextAuthSignOut, signIn as nextAuthSignIn } from "next-auth/react"
@@ -29,7 +28,6 @@ export function AuthProvider({ children, requireAuth }: AuthComponentProps) {
   const { data: session, status } = useSession()
   const sessionLoading = status === "loading"
 
-
   const [isAuthenticating, setIsAuthenticating] = useState(false)
   const isLoading = sessionLoading || isAuthenticating
 
@@ -44,10 +42,10 @@ export function AuthProvider({ children, requireAuth }: AuthComponentProps) {
     fcl.unauthenticate()
     await nextAuthSignOut({ redirect: false, callbackUrl })
     setIsAuthenticating(false)
+    router.push("/")
   }, [])
 
-  useEffect(() => {
-  }, [session])
+  useEffect(() => {}, [session])
 
   useEffect(() => {
     if (!requireAuth || isLoading) {
@@ -68,7 +66,7 @@ export function AuthProvider({ children, requireAuth }: AuthComponentProps) {
 
   useEffect(() => {
     if (session && !isLoading) {
-      ; (async () => {
+      ;(async () => {
         const client = await getClientFromSession(session)
         const { wallet } = await client.request(WalletDocument)
         if (!wallet) {
