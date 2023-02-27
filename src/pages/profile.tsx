@@ -5,6 +5,7 @@ import { useGraphQLQuery } from "../graphql/useGraphQLQuery"
 import { useAuthContext } from "../hooks/useAuthContext"
 import { WalletQuery, WalletDocument } from "../../generated/graphql"
 import BackIcon from "../components/BackIcon"
+import Link from "next/link"
 
 const profile = () => {
   const { session, signIn, isLoading } = useAuthContext()
@@ -32,7 +33,7 @@ const profile = () => {
               Wallet address
             </div>
             <div>
-              <a target="_blank" href="https://testnet.flowscan.org/account/0xundefined">
+              <a target="_blank" href={`https://testnet.flowscan.org/account/${wallet?.address}`}>
                 <div className="absolute top-[24px] left-[171px] tracking-[0.2px] leading-[20px] h-[22px] w-[143px] overflow-hidden text-black">
                   {wallet?.address}
                 </div>
@@ -63,16 +64,18 @@ const profile = () => {
             </div>
 
             <div>
-              <a target="_blank" href="https://testnet.flowscan.org/account/0xundefined">
-                <div className="absolute top-[calc(50%_+_20px)] left-[calc(50%_+_118px)] tracking-[0.2px] leading-[20px] h-[22px] w-[23px] overflow-hidden text-black">
-                  {wallet?.nfts?.length}
+              <Link href="/passport">
+                <div>
+                  <div className="absolute top-[calc(50%_+_20px)] left-[calc(50%_+_118px)] tracking-[0.2px] leading-[20px] h-[22px] w-[23px] overflow-hidden text-black">
+                    {wallet?.nfts?.length}
+                  </div>
+                  <img
+                    className="absolute top-[calc(50%_+_20px)] left-[calc(50%_+_138px)] w-6 h-6 overflow-hidden"
+                    alt=""
+                    src="../ckchevronright.svg"
+                  />
                 </div>
-                <img
-                  className="absolute top-[calc(50%_+_20px)] left-[calc(50%_+_138px)] w-6 h-6 overflow-hidden"
-                  alt=""
-                  src="../ckchevronright.svg"
-                />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
