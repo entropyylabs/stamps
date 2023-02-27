@@ -1,11 +1,10 @@
 import React from "react"
-import { Center, Box, VStack, Text, Button } from "@chakra-ui/react"
-import { useState, useEffect } from "react"
-import { WalletDetails } from "../ui/Wallet/WalletDetails"
+import HamMenu from "../components/HamMenu"
 import { Logout } from "@components/Logout"
 import { useGraphQLQuery } from "../graphql/useGraphQLQuery"
 import { useAuthContext } from "../hooks/useAuthContext"
 import { WalletQuery, WalletDocument } from "../../generated/graphql"
+import BackIcon from "../components/BackIcon"
 
 const profile = () => {
   const { session, signIn, isLoading } = useAuthContext()
@@ -22,6 +21,7 @@ const profile = () => {
   return (
     <div>
       <div className="relative bg-white w-full h-[665px] overflow-hidden text-left text-4xl text-black font-work-sans">
+        <HamMenu />
         <div className="absolute top-[114px] left-[21px] w-[348px] h-64 text-left text-lg text-gray-100 font-work-sans">
           <div className="absolute top-[0px] left-[0px] w-[348px] h-64">
             <img
@@ -79,18 +79,18 @@ const profile = () => {
           </div>
         </div>
         <button className="cursor-pointer [border:none] p-0 bg-mediumblue absolute top-[407px] left-[81px] rounded-lg w-[228px] h-[46px]">
-          <div className="absolute top-[15px] left-[27px] w-[175px] h-4">
+          <div className="absolute top-[15px] left-[27px] w-[228px] h-4">
             <div className="absolute top-[0px] left-[0px] text-xl tracking-[0.6px] leading-[16px] font-work-sans text-white text-center">
               Switch or Add wallet
             </div>
           </div>
         </button>
-        <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
-        <img className="absolute top-[14px] left-[349px] w-5 h-5" alt="" src="../menu.svg" />
+        <BackIcon to="/" />
         <div className="absolute top-[50px] left-[21px] w-[302px] h-12">
           <p className="m-0 absolute top-[0px] left-[0px] tracking-[0.2px] leading-[32px] flex items-center w-[302px] h-12">{`Your Profile `}</p>
         </div>
       </div>
+
       <Logout />
     </div>
   )
