@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { flippage } from "../utils/pageConfig"
 import Sheet from "react-modal-sheet"
+import Blockie from "./Blockie"
 
 const FlipPage = ({ index }) => {
   const [utility1, setUtility1] = useState(false)
@@ -38,6 +39,7 @@ const FlipPage = ({ index }) => {
 
   return (
     <main className="absolute top-[0px] left-[0px] w-[348px] h-[458px] text-left text-base text-orangered font-work-sans">
+      <Blockie />
       <Sheet isOpen={isOpen} onClose={() => setOpen(false)} detent="content-height">
         <Sheet.Container style={{ border: "2px solid black" }}>
           <Sheet.Header />
