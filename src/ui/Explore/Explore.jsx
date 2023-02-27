@@ -1,18 +1,21 @@
 import React from "react"
 import Link from "next/link"
+import HamMenu from "../../components/HamMenu"
 
 const Explore = () => {
   return (
     <div>
       <main className="relative bg-white w-full h-[665px] overflow-hidden text-left text-base text-black font-work-sans">
+        <HamMenu />
         <div className="absolute top-[0px] left-[0px] w-[390px] h-[665px]">
           <img
             className="absolute top-[0px] left-[0px] w-[390px] h-[665px] object-cover"
             alt=""
             src="../screenshot-20230216-at-1212-1@2x.png"
           />
-          <div className="absolute top-[36px] left-[0px] bg-goldenrod w-[390px] h-[52px]" />
-          <div className="absolute text-[32px] top-[37px] left-[27px] tracking-[0.2px] leading-[32px] flex items-center w-[168px] h-[49px]">
+          <div className="absolute top-[0px] left-[0px] bg-goldenrod w-[390px] h-[60px]"></div>
+
+          <div className="absolute text-[32px] top-[8px] left-[27px] tracking-[0.2px] leading-[32px] flex items-center w-[168px] h-[49px]">
             EXPLORE..
           </div>
         </div>
