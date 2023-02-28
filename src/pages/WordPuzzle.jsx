@@ -2,7 +2,16 @@ import React, { useState, useEffect } from "react"
 import Word from "../components/Word"
 import Link from "next/link"
 
+import { useRouter } from "next/router"
+
 const WordPuzzle = () => {
+  const router = useRouter()
+
+  const { hunt } = router.query
+
+  const question =
+    hunt === "mickey" ? " Who is Mickey Mouse’s bestfriend?" : "Who is founder of Nike?"
+
   const [counter, setCounter] = useState(100)
   const [done, setDone] = useState(false)
   const [doneCounter, setDoneCounter] = useState(3)
@@ -20,7 +29,7 @@ const WordPuzzle = () => {
         CLUE 1
       </p>
       <p className="m-0 absolute text-[24px] top-[113px] left-[21px]  tracking-[0.2px] leading-[24px] flex items-center w-[313px] h-[41px]">
-        Who is Mickey Mouse’s bestfriend?
+        {question}
       </p>
       {done ? (
         <div className="absolute top-[556px] left-[34px] w-[322px] h-[50px] text-center text-2xl text-gray-100">

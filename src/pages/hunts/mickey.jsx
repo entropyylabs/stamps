@@ -61,7 +61,7 @@ const mickey = () => {
       </div>
       <button className="cursor-pointer [border:none] p-0 bg-gray-100 absolute top-[607px] left-[21px] rounded-lg w-[348px] h-[46px]">
         <div className="absolute top-[15px] tracking-[0.6px] leading-[16px] font-medium font-work-sans text-white text-center w-full text-center text-[16px]">
-          <Link href="/WordPuzzle">Let’s play</Link>
+          <Link href={{ pathname: "/WordPuzzle", query: { hunt: "mickey" } }}>Let’s play</Link>
         </div>
       </button>
       <Link href="/">
