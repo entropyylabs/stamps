@@ -5,7 +5,7 @@ export const Word = () => {
   const answerWords = ["github"]
 
   const matrix = [
-    ["P", "D", "O", "N", "A", "U", "T"],
+    ["P", "K", "N", "I", "G", "H", "T"],
     ["Z", "L", "U", "T", "T", "J", "L"],
     ["V", "G", "U", "P", "H", "D", "G"],
     ["L", "G", "I", "T", "L", "G", "R"],
