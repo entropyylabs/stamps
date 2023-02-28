@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import Link from "next/link"
 import HamMenu from "../../components/HamMenu"
+import Sheet from "react-modal-sheet"
 
 const hm = () => {
+  const [isOpen, setOpen] = useState(false)
   return (
     <div className="relative bg-white w-full h-[665px] overflow-hidden text-left text-base text-orangered font-work-sans">
       <HamMenu />
@@ -46,11 +48,27 @@ const hm = () => {
       <Link href="/buy">
         <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
       </Link>
-      <div className="absolute top-[558px] left-[21px] rounded-lg bg-mediumblue w-[348px] h-12 text-center text-xl text-white">
+      <button
+        onClick={() => setOpen(true)}
+        className="absolute top-[558px] left-[21px] rounded-lg bg-mediumblue w-[348px] h-12 text-center text-xl text-white"
+      >
         <div className="absolute top-[15px] left-[0px] text-[16px] tracking-[0.6px] leading-[16px] font-medium w-full text-center">
           Place a bid
         </div>
-      </div>
+      </button>
+      <Sheet isOpen={isOpen} onClose={() => setOpen(false)} detent="content-height">
+        <Sheet.Container style={{ border: "2px solid black" }}>
+          <Sheet.Header />
+          <Sheet.Content>
+            <div className="relative h-[102px]">
+              <p className="m-0 absolute font-[20px] top-[20px] left-[26px] tracking-[0.2px] leading-[24px] flex items-center w-[281px] h-11">
+                Bid placed successfully!
+              </p>
+            </div>
+          </Sheet.Content>
+        </Sheet.Container>
+        <Sheet.Backdrop />
+      </Sheet>
     </div>
   )
 }
