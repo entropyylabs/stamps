@@ -20,7 +20,7 @@ const Cam = () => {
   return (
     <div>
       <div style={{ zIndex: 10000000, position: "absolute" }}>
-        <Link href="/celebration">
+        <Link href={{ pathname: "/celebration", query: { hunt: hunt } }}>
           {showImage ? (
             <img
               className="animate-spin fixed top-[250px] left-[100px] h-[202px] w-[207px]"
