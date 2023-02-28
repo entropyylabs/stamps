@@ -63,7 +63,7 @@ const profile = () => {
             <div className="absolute top-[213px] left-[17px] tracking-[0.2px] leading-[20px] flex items-center w-36 h-[22px]">
               Wallet Owner
             </div>
-            <div className="absolute top-[213px] left-[154px] tracking-[0.2px] leading-[20px] text-black">
+            <div className="absolute top-[213px] left-[154px] w-[170px] h-[22px] overflow-hidden tracking-[0.2px] leading-[20px] text-black">
               {wallet?.appUser?.email}
             </div>
 
