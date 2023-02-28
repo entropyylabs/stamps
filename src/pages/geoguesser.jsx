@@ -8,12 +8,19 @@ const Geoguesser = () => {
   const [answer, setAnswer] = useState("")
   const router = useRouter()
   useEffect(() => {
-    if (answer === "Fantasyland") {
+    setTimeout(() => {
+      router.push("/geoguesser2")
+    }, 15000)
+  }, [answer])
+
+  const checkAnswer = () => {
+    const answerLower = answer.toLowerCase()
+    if (answerLower === "fantasyland") {
       setTimeout(() => {
         router.push("/geoguesser2")
       }, 1000)
     }
-  }, [answer])
+  }
   return (
     <div className="relative bg-white w-full h-[665px] overflow-hidden text-left text-sm text-black font-work-sans">
       <div className="absolute top-[140px] left-[32px] w-[325px] h-[330px]">
@@ -45,6 +52,10 @@ const Geoguesser = () => {
           Maybe your stamp is located here?
         </p>
       </div>
+      <div onClick={checkAnswer}>
+        <img className="absolute top-[593px] left-[177px] w-9 h-9" alt="" src="../check.svg" />
+      </div>
+
       <Link href="/hunt">
         <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
       </Link>
