@@ -1,8 +1,11 @@
 import React from "react"
+import Link from "next/link"
+import HamMenu from "../../components/HamMenu"
 
 const hm = () => {
   return (
     <div className="relative bg-white w-full h-[665px] overflow-hidden text-left text-base text-orangered font-work-sans">
+      <HamMenu />
       <div className="absolute top-[528px] left-[107px] w-44 h-[22px] text-lg text-gray-400">
         <div className="absolute text-[14px] top-[0px] left-[0px] tracking-[0.2px] leading-[20px] flex items-center w-44 h-[22px]">
           Floor price : $100
@@ -40,8 +43,9 @@ const hm = () => {
           spring@ h&m
         </b>
       </div>
-      <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
-
+      <Link href="/buy">
+        <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
+      </Link>
       <div className="absolute top-[558px] left-[21px] rounded-lg bg-mediumblue w-[348px] h-12 text-center text-xl text-white">
         <div className="absolute top-[15px] left-[0px] text-[16px] tracking-[0.6px] leading-[16px] font-medium w-full text-center">
           Place a bid

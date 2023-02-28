@@ -1,6 +1,7 @@
 import type { NextPage } from "next"
 import HamMenu from "../components/HamMenu"
 import BackIcon from "../components/BackIcon"
+import Link from "next/link"
 
 const Sell: NextPage = () => {
   return (
@@ -16,9 +17,11 @@ const Sell: NextPage = () => {
           src="../group-7049.svg"
         />
         <div className="absolute top-[216px] left-[0px] rounded-lg bg-mediumblue w-[348px] h-12">
-          <div className="absolute top-[15px] left-[124px] tracking-[0.6px] leading-[16px] font-medium">
-            Place a bid
-          </div>
+          <Link href="/bid/nike">
+            <div className="absolute top-[15px] left-[124px] tracking-[0.6px] leading-[16px] font-medium">
+              Place a bid
+            </div>
+          </Link>
         </div>
       </div>
       <div className="absolute top-[413px] left-[20px] w-[349px] h-[264px]">
@@ -30,9 +33,11 @@ const Sell: NextPage = () => {
         />
       </div>
       <button className="cursor-pointer [border:none] p-0 bg-mediumblue absolute top-[629px] left-[20px] rounded-lg w-[348px] h-12">
-        <div className="absolute top-[15px] left-[124px] text-xl tracking-[0.6px] leading-[16px] font-medium font-work-sans text-white text-center">
-          Place a bid
-        </div>
+        <Link href="/bid/mcd">
+          <div className="absolute top-[15px] left-[124px] text-xl tracking-[0.6px] leading-[16px] font-medium font-work-sans text-white text-center">
+            Place a bid
+          </div>
+        </Link>
       </button>
       <div className="absolute top-[704px] left-[21px] w-[348px] h-[264px]">
         <div className="absolute top-[0px] left-[0px] rounded-lg bg-white box-border w-[348px] h-[239px] border-[2px] border-solid border-black" />
@@ -42,9 +47,11 @@ const Sell: NextPage = () => {
           src="../group-7053.svg"
         />
         <div className="absolute top-[216px] left-[0px] rounded-lg bg-mediumblue w-[348px] h-12">
-          <div className="absolute top-[15px] left-[124px] tracking-[0.6px] leading-[16px] font-medium">
-            Place a bid
-          </div>
+          <Link href="/bid/starbucks">
+            <div className="absolute top-[15px] left-[124px] tracking-[0.6px] leading-[16px] font-medium">
+              Place a bid
+            </div>
+          </Link>
         </div>
       </div>
       <div className="absolute top-[995px] left-[21px] w-[348px] h-[265px]">
@@ -55,9 +62,11 @@ const Sell: NextPage = () => {
           src="../hmstamp.svg"
         />
         <div className="absolute top-[217px] left-[0px] rounded-lg bg-mediumblue w-[348px] h-12">
-          <div className="absolute top-[15px] left-[124px] tracking-[0.6px] leading-[16px] font-medium">
-            Place a bid
-          </div>
+          <Link href="/bid/hm">
+            <div className="absolute top-[15px] left-[124px] tracking-[0.6px] leading-[16px] font-medium">
+              Place a bid
+            </div>
+          </Link>
         </div>
       </div>
       <HamMenu />

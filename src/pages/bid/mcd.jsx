@@ -1,5 +1,6 @@
 import React from "react"
 import HamMenu from "../../components/HamMenu"
+import Link from "next/link"
 
 const mcd = () => {
   return (
@@ -41,8 +42,9 @@ const mcd = () => {
           MC FREEEEBIE
         </b>
       </div>
-      <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
-
+      <Link href="/buy">
+        <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
+      </Link>
       <div className="absolute top-[558px] left-[21px] rounded-lg bg-mediumblue w-[348px] h-12 text-center text-xl text-white">
         <div className="absolute top-[15px] left-[0px] text-[16px] tracking-[0.6px] leading-[16px] font-medium w-full text-center">
           Place a bid
