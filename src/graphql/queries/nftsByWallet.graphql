@@ -1,19 +1,13 @@
-query userNfts($id: ID) {
-  nfts(userId: $id) {
+query nftsByWallet($walletAddress: String) {
+  nftsByWallet(address: $walletAddress) {
     items {
       blockchainId
       blockchainState
       metadata
       id
       serialNumber
-      wallet {
-        address
-        walletType
-      }
-      transactions {
-        hash
-        name
-      }
+
+      # mintTransactionHash
       model {
         id
         metadata
