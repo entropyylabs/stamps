@@ -1,11 +1,14 @@
 import Link from "next/link"
 import GeoGuesser from "../components/GeoGuesser"
+import { useRouter } from "next/router"
 
 const Geoguesser2 = () => {
+  const router = useRouter()
+  const { hunt } = router.query
   return (
     <div className="relative bg-white w-full h-[665px] overflow-hidden text-center text-2xl text-orangered font-work-sans">
       <div className="absolute top-[140px] left-[32px] w-[325px] h-[330px]">
-        <GeoGuesser />
+        <GeoGuesser hunt={hunt} />
       </div>
       <div className="absolute top-[486px] left-[54px] w-72 h-10">
         <p className="m-0 absolute top-[0px] left-[0px] leading-[20px] font-bold flex items-center justify-center w-72 h-10">

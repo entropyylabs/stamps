@@ -7,9 +7,11 @@ import { useRouter } from "next/router"
 const Geoguesser = () => {
   const [answer, setAnswer] = useState("")
   const router = useRouter()
+  const { hunt } = router.query
+
   useEffect(() => {
     setTimeout(() => {
-      router.push("/geoguesser2")
+      router.push({ pathname: "/geoguesser2", query: { hunt: hunt } })
     }, 15000)
   }, [answer])
 
@@ -17,7 +19,7 @@ const Geoguesser = () => {
     const answerLower = answer.toLowerCase()
     if (answerLower === "fantasyland") {
       setTimeout(() => {
-        router.push("/geoguesser2")
+        router.push({ pathname: "/geoguesser2", query: { hunt: hunt } })
       }, 1000)
     }
   }
@@ -25,7 +27,7 @@ const Geoguesser = () => {
     <div className="relative bg-white w-full h-[665px] overflow-hidden text-left text-sm text-black font-work-sans">
       <div className="absolute top-[140px] left-[32px] w-[325px] h-[330px]">
         <div className="absolute top-[0px] left-[0px] w-[325px] h-[330px] object-cover">
-          <GeoGuesser />
+          <GeoGuesser hunt={hunt} />
         </div>
       </div>
       <Input

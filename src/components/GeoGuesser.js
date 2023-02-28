@@ -1,12 +1,16 @@
 import React from "react"
 import ReactStreetview from "react-streetview"
 
-const GeoGuesser = () => {
+const GeoGuesser = ({ hunt }) => {
   const googleMapsApiKey = process.env.NEXT_PUBLIC_MAPS_KEY
+  const pos =
+    hunt === "mickey"
+      ? { lat: 48.86750220793768, lng: 2.78353936022087 }
+      : { lat: 41.88088646504796, lng: -87.67418662271211 }
 
   // see https://developers.google.com/maps/documentation/javascript/3.exp/reference#StreetViewPanoramaOptions
   const streetViewPanoramaOptions = {
-    position: { lat: 48.86750220793768, lng: 2.78353936022087 },
+    position: pos,
     pov: { heading: 100, pitch: 0 },
     zoom: 1,
   }

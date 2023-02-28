@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Word from "../components/Word"
 import Link from "next/link"
-
 import { useRouter } from "next/router"
 
 const WordPuzzle = () => {
@@ -37,7 +36,7 @@ const WordPuzzle = () => {
             WELL DONE! THATS CORRECT!
           </div>
           <div className="absolute text-[20px] top-[60px] left-[80px] tracking-[0.2px] leading-[24px] flex items-center justify-center w-[322px] h-[50px]">
-            <Link href="/geoguesser">
+            <Link href={{ pathname: "/geoguesser", query: { hunt: hunt } }}>
               <button className="cursor-pointer [border:none] p-0 bg-gray-100 absolute top-[0px] left-[0px] rounded-lg w-40 h-10">
                 <div className="absolute top-[12px] left-[30px] w-20 h-4">
                   <div className="absolute top-[0px] left-[0px] text-xl tracking-[0.6px] leading-[16px] font-medium font-work-sans text-white text-center">
