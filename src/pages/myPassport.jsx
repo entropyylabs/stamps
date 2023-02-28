@@ -52,7 +52,7 @@ const myPassport = () => {
                 No
               </p>
               <p className="m-0 absolute font-[20px] top-[20px] left-[26px] tracking-[0.2px] leading-[24px] flex items-center w-[281px] h-11">
-                Do you want to make use of this utility?
+                Do you want to sell this stamp on the secondary marketplace?
               </p>
             </div>
           </Sheet.Content>
