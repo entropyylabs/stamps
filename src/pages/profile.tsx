@@ -64,7 +64,7 @@ const profile = () => {
               Wallet Owner
             </div>
             <div className="absolute top-[213px] left-[154px] w-[170px] h-[22px] overflow-hidden tracking-[0.2px] leading-[20px] text-black">
-              {wallet?.appUser?.email}
+              {wallet?.appUser?.email.slice(0, 20) + "..."}
             </div>
 
             <div>
