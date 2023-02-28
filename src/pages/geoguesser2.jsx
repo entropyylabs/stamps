@@ -24,7 +24,7 @@ const Geoguesser2 = () => {
           Guess this place!
         </p>
       </div>
-      <Link href="/cam">
+      <Link href={{ pathname: "/cam", query: { hunt: hunt } }}>
         <button className="cursor-pointer [border:none] p-0 bg-gray-100 absolute top-[544px] left-[102px] rounded-lg w-[186px] h-10">
           <div className="absolute top-[12px] left-[34px] w-[118px] h-4">
             <div className="absolute top-[0px] left-[19px] text-xl tracking-[0.6px] leading-[16px] text-white text-center">
