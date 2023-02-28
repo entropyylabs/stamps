@@ -9,12 +9,6 @@ const Geoguesser = () => {
   const router = useRouter()
   const { hunt } = router.query
 
-  useEffect(() => {
-    setTimeout(() => {
-      router.push({ pathname: "/geoguesser2", query: { hunt: hunt } })
-    }, 15000)
-  }, [answer])
-
   const checkAnswer = () => {
     const answerLower = answer.toLowerCase()
     if (answerLower === "fantasyland") {

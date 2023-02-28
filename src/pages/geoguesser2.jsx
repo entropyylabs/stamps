@@ -1,6 +1,6 @@
-import Link from "next/link"
 import GeoGuesser from "../components/GeoGuesser"
 import { useRouter } from "next/router"
+import Link from "next/link"
 
 const Geoguesser2 = () => {
   const router = useRouter()
@@ -15,7 +15,9 @@ const Geoguesser2 = () => {
           SEEMS LIKE THE STAMP IS AROUND YOU!
         </p>
       </div>
-      <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon3.svg" />
+      <Link href="/">
+        <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
+      </Link>
       <div className="absolute top-[58px] left-[27px] w-[313px] h-[47px] text-left text-xl text-black">
         <p className="m-0 absolute top-[0px] left-[0px] tracking-[0.2px] leading-[32px] flex items-center w-[61px] h-3.5">
           CLUE 1
