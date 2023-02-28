@@ -9,7 +9,7 @@ const mcd = () => {
     <div className="relative bg-white w-full h-[665px] overflow-hidden text-left text-base text-orangered font-work-sans">
       <div className="absolute top-[528px] left-[107px] w-44 h-[22px] text-lg text-gray-400">
         <div className="absolute text-[14px] top-[0px] left-[0px] tracking-[0.2px] leading-[20px] flex items-center w-44 h-[22px]">
-          Floor price : 100 EUROS
+          Floor price : $75
         </div>
       </div>
       <div className="absolute top-[379px] left-[21px] w-[348px] h-[125px]">
