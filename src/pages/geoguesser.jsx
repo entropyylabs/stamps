@@ -58,7 +58,7 @@ const Geoguesser = () => {
         <img className="absolute top-[593px] left-[177px] w-9 h-9" alt="" src="../check.svg" />
       </div>
 
-      <Link href="/hunt">
+      <Link href="/">
         <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
       </Link>
     </div>

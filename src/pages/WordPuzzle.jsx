@@ -65,7 +65,7 @@ const WordPuzzle = () => {
           ></div>
         </div>
       )}
-      <Link href="/hunt">
+      <Link href="/">
         <img className="absolute top-[14px] left-[21px] w-5 h-5" alt="" src="../back-icon.svg" />
       </Link>
     </div>
