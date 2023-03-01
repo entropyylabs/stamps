@@ -1,59 +1,17 @@
-# Walletless Onboarding Starter
+# stamps!
 
-This is Niftory's Walletless Onboarding Starter built on Next.js that uses the [Niftory API](https://docs.niftory.com/home/v/api/). Use this app as inspiration to easily bring your users into Web3, without a wallet! 
+[stamps-logo.jpg](https://postimg.cc/jWVfLZRS)
 
-This app auto-generates a custodial wallet that you can use for customers and allows you to attach additional wallets as well. In the future, we'll be adding support for Flow's hybrid custody features. 
+A unified passport of “stamps!” from your beloved brands collected at unique locations.
 
-## Usage
+## Tech Stack :
 
-### Configuration
+We have created a mobile first web experience keeping in mind how a web first experience can help in mass adoption. The website is built using NextJs.
 
-This app uses [dotenv](https://github.com/motdotla/dotenv) for configuration, so you can set your app's environment variables by creating a `.env` file in this directory.
+Flow blockchain's unique architecture and features make it well-suited for handling the high transaction volume and scalability required for a mass adoption app centered around NFTs.
 
-See [.env.example](./.env.example) for an example of how to configure these environment variables.
+We leverage the Niftory APIs to create a seamless walletless onboarding experience where the user is given a social login option and we create a wallet for them on the fly. Niftory APIs are also used to mint and transfer NFTs to the user’s wallet
 
-### Installing Dependencies
+We are using nested NFTs on the unique network to create geo-tagged NFTs. Every parent NFT has nested child NFTs, these child NFTs are associated with the benefits that every brand provides. Once these benefits are claimed these child NFTs are marked as claimed.
 
-To install the dependencies of this app.
-
-```
-yarn install
-```
-
-### Running the app
-
-Once your `.env` file is set up, you can run the app locally with:
-
-```
-yarn dev
-```
-
-## Overview
-
-### Stack:
-
-- Web framework: [Next.js](https://nextjs.org/)
-- Auth framework: [NextAuth](https://next-auth.js.org/)
-- Graph QL Client: [graphql-request](https://github.com/prisma-labs/graphql-request)
-- React state management: [urql](https://formidable.com/open-source/urql/) and [SWR](https://swr.vercel.app/docs/with-nextjs)
-- GraphQL codegen: [graphql-codeg-generator](https://www.graphql-code-generator.com/)
-
-### Authentication
-
-This app demonstrates three forms of authentication in the Niftory API.
-
-#### User authentication
-
-We use [NextAuth](https://next-auth.js.org/) to manage user sessions in this app.
-
-[Our configuration](pages/api/auth/[...nextauth].ts) uses Niftory as the only OAuth provider and saves the user's Niftory token in the session.
-
-The browser's [GraphQL client](src/components/GraphQLClientProvider.tsx) then includes that token in every request to the Niftory API as a bearer token in the `Authorization` header
-
-#### App Credentials authentication using NextJS API routes or in your backend.
-
-If you want to make requests using the app's credentials instead of the User's credentials for performing admin only tasks then that can be done using the [Serverside GraphQL Client](src/graphql/getClientForServer.ts).
-
-Note - This client should not be used in the frontend, it should either be used in the backend of your app or in the [NextJS API Routes](https://nextjs.org/docs/api-routes/introduction).
-
-
+[stamps-cover-image.jpg](https://postimg.cc/rdL9v80j)
