@@ -1,6 +1,6 @@
 # stamps!
 
-[stamps-logo.jpg](https://postimg.cc/jWVfLZRS)
+[![stamps-logo.jpg](https://i.postimg.cc/bvr9VBMk/stamps-logo.jpg)](https://postimg.cc/jWVfLZRS)
 
 A unified passport of “stamps!” from your beloved brands collected at unique locations.
 
@@ -14,4 +14,4 @@ We leverage the Niftory APIs to create a seamless walletless onboarding experien
 
 We are using nested NFTs on the unique network to create geo-tagged NFTs. Every parent NFT has nested child NFTs, these child NFTs are associated with the benefits that every brand provides. Once these benefits are claimed these child NFTs are marked as claimed.
 
-[stamps-cover-image.jpg](https://postimg.cc/rdL9v80j)
+[![stamps-cover-image.jpg](https://i.postimg.cc/VNJH0vzx/stamps-cover-image.jpg)](https://postimg.cc/rdL9v80j)
